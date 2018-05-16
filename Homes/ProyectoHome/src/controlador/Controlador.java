@@ -11,7 +11,7 @@ import vista.UserLogin;
 
 /**
  *
- * @author TURKEYTITAN
+ * @author TURNKEYTITAN
  */
 public class Controlador implements MouseListener {
 
@@ -19,11 +19,15 @@ public class Controlador implements MouseListener {
     private Usuario userModel;
     private HomeInicio home;
     private RegisterUser registeruser;
+    private Conexion con;
 
     public Controlador(UserLogin userlogin, Conexion m) {
         view = userlogin;
         view.JIngresar.addMouseListener(this);
-
+        view.registeruser.Close.addMouseListener(this);
+        view.registeruser.Minimize.addMouseListener(this);
+        view.Close.addMouseListener(this);
+        view.Minimize.addMouseListener(this);
         //home.category.addMouseListener(this);
         //view.JRegistrarse.addMouseListener(this);
 //      registeruser.JAtras.addMouseListener(this);
@@ -32,7 +36,11 @@ public class Controlador implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent me) {
-        if (view.JIngresar.equals(me.getSource())) {
+        if (view.registeruser.Minimize.equals(me.getSource())) {
+            view.registeruser.setState(view.registeruser.ICONIFIED);
+        } else if (view.registeruser.Close.equals(me.getSource())) {
+            System.exit(0);
+        } else if (view.JIngresar.equals(me.getSource())) {
             view.setVisible(false);
             home = new HomeInicio();
             home.JCategoria.addMouseListener(this);
@@ -49,6 +57,7 @@ public class Controlador implements MouseListener {
             home.JCarrito.addMouseListener(this);
             home.close.addMouseListener(this);
             home.minimize.addMouseListener(this);
+
             //home.hg.medicina.buttonGlic
         } else if (view.JRegistrarse.equals(me.getSource())) {
             view.setVisible(false);
@@ -57,6 +66,10 @@ public class Controlador implements MouseListener {
         } else if (view.registeruser.JAtras.equals(me.getSource())) {
             view.setVisible(true);
             view.registeruser.setVisible(false);
+        } else if (view.Close.equals(me.getSource())) {
+            System.exit(0);
+        } else if (view.Minimize.equals(me.getSource())) {
+            view.setState(view.ICONIFIED);
         }
         if (home != null) {
             if (home.JCategoria.equals(me.getSource())) {

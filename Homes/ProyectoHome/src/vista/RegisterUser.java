@@ -17,11 +17,11 @@ import javax.swing.JTextField;
  *
  * @author TURKEYTITAN
  */
-public class RegisterUser extends JFrame implements MouseListener {
+public class RegisterUser extends JFrame {
 
     public JLabel correoElctronico, Nombres, jLabel4, contraseña, usuario, logoUser, guardar, logoUmedic, atras, umedic, Minimize, Close, Apellidos, direccion;
     public JPanel JRegistrarse, JIngresar, JAtras, JGuardar;
-    public JTextField textoDireccion,  textoApellidos, textousuario, textoNombres, textoCorreo;
+    public JTextField textoDireccion, textoApellidos, textousuario, textoNombres, textoCorreo;
     public JPasswordField textContraseña;
     public KGradientPanel kGradientPanel1;
 
@@ -53,7 +53,7 @@ public class RegisterUser extends JFrame implements MouseListener {
         correoElctronico = new javax.swing.JLabel();
         textousuario = new javax.swing.JTextField();
         textoApellidos = new javax.swing.JTextField();
-        
+
         textoDireccion = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -84,13 +84,13 @@ public class RegisterUser extends JFrame implements MouseListener {
         kGradientPanel1.add(direccion);
         direccion.setBounds(560, 290, 140, 20);
 
-        JAtras.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(215 , 8, 243)));
+        JAtras.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(215, 8, 243)));
         JAtras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         JAtras.setOpaque(false);
         JAtras.setLayout(null);
 
         atras.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        atras.setForeground(new java.awt.Color(215 , 8, 243));
+        atras.setForeground(new java.awt.Color(215, 8, 243));
         atras.setText("Atrás");
         JAtras.add(atras);
         atras.setBounds(40, 0, 40, 20);
@@ -98,13 +98,13 @@ public class RegisterUser extends JFrame implements MouseListener {
         kGradientPanel1.add(JAtras);
         JAtras.setBounds(640, 450, 120, 30);
 
-        JGuardar.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(215 , 8, 243)));
+        JGuardar.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(215, 8, 243)));
         JGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         JGuardar.setOpaque(false);
         JGuardar.setLayout(null);
 
         guardar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        guardar.setForeground(new java.awt.Color(215 , 8, 243));
+        guardar.setForeground(new java.awt.Color(215, 8, 243));
         guardar.setText("Guardar");
         JGuardar.add(guardar);
         guardar.setBounds(30, 0, 60, 20);
@@ -131,7 +131,6 @@ public class RegisterUser extends JFrame implements MouseListener {
         Minimize.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         kGradientPanel1.add(Minimize);
         Minimize.setBounds(900, 20, 30, 30);
-        
 
         textoCorreo.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         textoCorreo.setForeground(new java.awt.Color(255, 255, 255));
@@ -184,8 +183,6 @@ public class RegisterUser extends JFrame implements MouseListener {
         kGradientPanel1.add(textoApellidos);
         textoApellidos.setBounds(560, 140, 290, 30);
 
-        
-
         textoDireccion.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         textoDireccion.setForeground(new java.awt.Color(255, 255, 255));
         textoDireccion.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
@@ -197,37 +194,37 @@ public class RegisterUser extends JFrame implements MouseListener {
 
         this.add(kGradientPanel1);
         kGradientPanel1.setBounds(0, 0, 1001, 623);
-        Minimize.addMouseListener(this);
-        Close.addMouseListener(this);
+       
+       
     }
 
-    @Override
-    public void mouseClicked(MouseEvent me) {
-        if (Minimize.equals(me.getSource())) {
-            this.setState(HomeInicio.ICONIFIED);
+    public String getTextoDireccion() {
+        return textoDireccion.getText();
+    }
+
+    public String getTextoUsuario() {
+        return textousuario.getText();
+    }
+
+    public String getTextoNombres() {
+        if (textoApellidos.getText() != "") {
+            return textoNombres.getText() + " " + textoApellidos.getText();
         }
-        if (Close.equals(me.getSource())) {
-            System.exit(0);
+        return textoNombres.getText();
+    }
+
+    public String getTextoCorreo() {
+        return textoCorreo.getText();
+    }
+
+    public String getTextPassword() {
+        return String.valueOf(textContraseña.getPassword());
+    }
+
+    public Boolean getFilledTexts() {
+        if (getTextoNombres() != "" && getTextoUsuario() != "" && getTextoDireccion() != "" && getTextoCorreo() != "" && getTextPassword() != "") {
+            return false;
         }
-    }
-
-    @Override
-    public void mousePressed(MouseEvent me) {
-
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent me) {
-
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent me) {
-
-    }
-
-    @Override
-    public void mouseExited(MouseEvent me) {
-
+        return true;
     }
 }
