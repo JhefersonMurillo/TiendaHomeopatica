@@ -10,11 +10,11 @@ import javax.swing.*;
  * @author TURKEYTITAN
  */
 public class HomeCategoryMedicines extends JPanel {
-    JLabel Dolex,Glig,Tricovit,Dolfenox,Dolexni,voltaren,priceDolfenox,priceGli,PriceDolex,priceTricovi,PriceVoltaren,priceDolexNi;
-    JPanel JDolex,JClig,JTricovi,JDolfenox,JDolexNi,JVoltaren;
-    JButton buttonDolfenox,buttonGlic,butonDolex,buttonTricovit,buttonVoltaren,buttonDolexNi;
+    public JLabel Dolex,Glig,Tricovit,Dolfenox,Dolexni,voltaren,priceDolfenox,priceGli,PriceDolex,priceTricovi,PriceVoltaren,priceDolexNi;
+    public JPanel JDolex,JClig,JTricovi,JDolfenox,JDolexNi,JVoltaren;
+    public JButton buttonDolfenox,buttonGlic,butonDolex,buttonTricovit,buttonVoltaren,buttonDolexNi;
     
-    HomeCategoryMedicines(){
+   public HomeCategoryMedicines(){
         
         setPreferredSize(new java.awt.Dimension(730, 500));
         setBackground(new java.awt.Color(235, 235, 235));

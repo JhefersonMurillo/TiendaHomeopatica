@@ -17,13 +17,13 @@ import java.awt.event.MouseListener;
  */
 public class HomeCategory extends JPanel implements MouseListener {
 
-    JLabel accesibilidad, salud, ortopedicos, logoOrtopedicos, belleza, equipos, logoAccesibilidad, logoBelleza, logoEquipos, medicamentos, LogoMedicamentos,
+    public JLabel accesibilidad, salud, ortopedicos, logoOrtopedicos, belleza, equipos, logoAccesibilidad, logoBelleza, logoEquipos, medicamentos, LogoMedicamentos,
             logoProtesis, protesis;
-    JPanel JAccesibilidad, JBelleza, JEquipos, JMedicamentos, JOrtopedicos, JProtesis;
+    public JPanel JAccesibilidad, JBelleza, JEquipos, JMedicamentos, JOrtopedicos, JProtesis;
 
     public HomeCategoryMedicines medicina;
 
-    HomeCategory() {
+   public HomeCategory() {
 
         setPreferredSize(new java.awt.Dimension(730, 440));
         setBackground(new java.awt.Color(235, 235, 235));
@@ -128,7 +128,7 @@ public class HomeCategory extends JPanel implements MouseListener {
 
         JMedicamentos.addMouseListener(this);
         JBelleza.addMouseListener(this);
-        JAccesibilidad.addMouseListener(this);
+        //JAccesibilidad.addMouseListener(this);
         JOrtopedicos.addMouseListener(this);
         JEquipos.addMouseListener(this);
         JProtesis.addMouseListener(this);
@@ -150,7 +150,7 @@ public class HomeCategory extends JPanel implements MouseListener {
 
     @Override
     public void mouseEntered(MouseEvent me) {
-        if (JMedicamentos.equals(me.getSource())) {
+        /*if (JMedicamentos.equals(me.getSource())) {
             JMedicamentos.setBackground(new java.awt.Color(100, 25, 115));
             medicamentos.setForeground(new Color(204, 204, 204));
             LogoMedicamentos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/GrisMedicamento.png"))); // NOI18N
@@ -158,7 +158,7 @@ public class HomeCategory extends JPanel implements MouseListener {
             LogoMedicamentos.setBounds(40, 30, 70, 70);
             this.add(JMedicamentos);
             JMedicamentos.setBounds(80, 260, 140, 140);
-        } else if (JBelleza.equals(me.getSource())) {
+        } /*else if (JBelleza.equals(me.getSource())) {
             JBelleza.setBackground(new java.awt.Color(100, 25, 115));
             logoBelleza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/GrisBelleza.png"))); // NOI18N
             JBelleza.add(logoBelleza);
@@ -188,7 +188,7 @@ public class HomeCategory extends JPanel implements MouseListener {
             this.add(JOrtopedicos);
             JOrtopedicos.setBounds(300, 260, 140, 140);
 
-        }else if (JEquipos.equals(me.getSource())) {
+        } else if (JEquipos.equals(me.getSource())) {
 
             JEquipos.setBackground(new java.awt.Color(100, 25, 115));
             logoEquipos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/GrisEquipos.png")));
@@ -200,7 +200,7 @@ public class HomeCategory extends JPanel implements MouseListener {
             this.add(JEquipos);
             JEquipos.setBounds(520, 50, 140, 140);
 
-        }else if (JProtesis.equals(me.getSource())) {
+        } else if (JProtesis.equals(me.getSource())) {
 
             JProtesis.setBackground(new java.awt.Color(100, 25, 115));
             logoProtesis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/GrisProtesis.png")));
@@ -212,14 +212,14 @@ public class HomeCategory extends JPanel implements MouseListener {
             this.add(JProtesis);
             JProtesis.setBounds(520, 260, 140, 140);
 
-        }
+        }*/
 
     }
 
     @Override
     public void mouseExited(MouseEvent me) {
 
-        if (JMedicamentos.equals(me.getSource())) {
+       /* if (JMedicamentos.equals(me.getSource())) {
             JMedicamentos.setBackground(new java.awt.Color(255, 255, 255));
             //medicamentos.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
             //medicamentos.setBounds(20, 110, 110, 21);
@@ -253,7 +253,7 @@ public class HomeCategory extends JPanel implements MouseListener {
             JOrtopedicos.setBackground(new java.awt.Color(255, 255, 255));
             logoOrtopedicos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Ortopedicoo.png")));
             JOrtopedicos.add(ortopedicos);
-            ortopedicos.setForeground(new Color(0,0,0));
+            ortopedicos.setForeground(new Color(0, 0, 0));
             ortopedicos.setBounds(30, 110, 85, 21);
             logoOrtopedicos.setBounds(40, 30, 70, 70);
             JOrtopedicos.add(logoOrtopedicos);
@@ -270,7 +270,7 @@ public class HomeCategory extends JPanel implements MouseListener {
             JEquipos.add(logoEquipos);
             this.add(JEquipos);
             JEquipos.setBounds(520, 50, 140, 140);
-        }else if (JProtesis.equals(me.getSource())) {
+        } else if (JProtesis.equals(me.getSource())) {
 
             JProtesis.setBackground(new java.awt.Color(255, 255, 255));
             logoProtesis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Protesis.png")));
@@ -282,7 +282,7 @@ public class HomeCategory extends JPanel implements MouseListener {
             this.add(JProtesis);
             JProtesis.setBounds(520, 260, 140, 140);
 
-        }
+        }*/
 
     }
 

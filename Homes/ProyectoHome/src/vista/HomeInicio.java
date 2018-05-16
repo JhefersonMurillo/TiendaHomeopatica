@@ -208,8 +208,20 @@ public class HomeInicio extends JFrame implements MouseListener {
 
     @Override
     public void mouseClicked(java.awt.event.MouseEvent me) {
-        if (JCategoria.equals(me.getSource())) {
-           
+       // if (JCategoria.equals(me.getSource())) {
+            /*hg.setVisible(true);
+            u.setVisible(false);
+            e.setVisible(false);
+            d.setVisible(false);
+            hg.medicina.setVisible(false);
+            titleHeader.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+            titleHeader.setForeground(new java.awt.Color(204, 204, 204));
+            titleHeader.setText("Categoria");
+            JHeader.add(titleHeader);
+            titleHeader.setBounds(100, 30, 230, 50);
+            iconHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/CategoryHeader.png"))); // NOI18N
+            JHeader.add(iconHeader);
+            iconHeader.setBounds(30, 30, 90, 50);
 
         } else if (JAyuda.equals(me.getSource())) {
             e.setVisible(true);
@@ -226,7 +238,7 @@ public class HomeInicio extends JFrame implements MouseListener {
             JHeader.add(iconHeader);
             iconHeader.setBounds(30, 30, 90, 50);
 
-        } else if (JAcerca.equals(me.getSource())) {
+        } else */if (JAcerca.equals(me.getSource())) {
             e.setVisible(false);
             hg.setVisible(false);
             u.setVisible(true);
