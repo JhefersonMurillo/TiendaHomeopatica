@@ -11,7 +11,7 @@ import vista.UserLogin;
 
 /**
  *
- * @author TURKEYTITAN
+ * @author TURNKEYTITAN
  */
 public class Controlador implements MouseListener {
 
@@ -19,6 +19,7 @@ public class Controlador implements MouseListener {
     private Usuario userModel;
     private HomeInicio home;
     private RegisterUser registeruser;
+    private Conexion con;
 
     public Controlador(UserLogin userlogin, Conexion m) {
         view = userlogin;
