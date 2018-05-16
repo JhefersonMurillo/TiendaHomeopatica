@@ -14,7 +14,7 @@ import org.w3c.dom.events.MouseEvent;
  *
  * @author Kilmainham
  */
-public class HomeInicio extends JFrame implements MouseListener {
+public class HomeInicio extends JFrame  {
 
     public JPanel izquierda, JAcerca, JCategoria, JAyuda, JCarrito, JHeader;
     public JLabel umedic, corazon, categoriasl, comprasl, ayudal, acercal, help, category, safe, buy, close, minimize, iconHeader, titleHeader;
@@ -164,12 +164,12 @@ public class HomeInicio extends JFrame implements MouseListener {
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        JCategoria.addMouseListener(this);
-        JAyuda.addMouseListener(this);
-        JAcerca.addMouseListener(this);
-        JCarrito.addMouseListener(this);
-        close.addMouseListener(this);
-        minimize.addMouseListener(this);
+        //JCategoria.addMouseListener(this);
+        //JAyuda.addMouseListener(this);
+        //JAcerca.addMouseListener(this);
+        //JCarrito.addMouseListener(this);
+        //close.addMouseListener(this);
+        //minimize.addMouseListener(this);
 
         u = new HomeInformation();
         this.add(u);
@@ -184,7 +184,7 @@ public class HomeInicio extends JFrame implements MouseListener {
         hg.JBelleza.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         hg.JEquipos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         hg.JMedicamentos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        hg.JMedicamentos.addMouseListener(this);
+        //hg.JMedicamentos.addMouseListener(this);
         hg.JOrtopedicos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         hg.JProtesis.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -204,7 +204,7 @@ public class HomeInicio extends JFrame implements MouseListener {
         this.add(hg.medicina);
         hg.medicina.setBounds(250, 100, 730, 500);
         hg.medicina.setVisible(false);
-    }
+    }/*
 
     @Override
     public void mouseClicked(java.awt.event.MouseEvent me) {
@@ -238,7 +238,7 @@ public class HomeInicio extends JFrame implements MouseListener {
             JHeader.add(iconHeader);
             iconHeader.setBounds(30, 30, 90, 50);
 
-        } else */if (JAcerca.equals(me.getSource())) {
+        } else if (JAcerca.equals(me.getSource())) {
             e.setVisible(false);
             hg.setVisible(false);
             u.setVisible(true);
@@ -289,7 +289,7 @@ public class HomeInicio extends JFrame implements MouseListener {
 
     @Override
     public void mouseEntered(java.awt.event.MouseEvent me) {
-        if (JCategoria.equals(me.getSource())) {
+       /* if (JCategoria.equals(me.getSource())) {
             JCategoria.setBackground(new java.awt.Color(85, 65, 118));
         } else if (JAcerca.equals(me.getSource())) {
             JAcerca.setBackground(new java.awt.Color(85, 65, 118));
@@ -299,13 +299,13 @@ public class HomeInicio extends JFrame implements MouseListener {
             JCarrito.setBackground(new java.awt.Color(85, 65, 118));
         } else if (JCarrito.equals(me.getSource())) {
             JCarrito.setBackground(new java.awt.Color(85, 65, 118));
-        }
+        }*
 
     }
 
     @Override
     public void mouseExited(java.awt.event.MouseEvent me) {
-        if (JCategoria.equals(me.getSource())) {
+        /*if (JCategoria.equals(me.getSource())) {
             JCategoria.setBackground(new java.awt.Color(54, 33, 89));
         } else if (JAcerca.equals(me.getSource())) {
             JAcerca.setBackground(new java.awt.Color(54, 33, 89));
@@ -314,6 +314,6 @@ public class HomeInicio extends JFrame implements MouseListener {
         } else if (JCarrito.equals(me.getSource())) {
             JCarrito.setBackground(new java.awt.Color(54, 33, 89));
         }
-    }
+    }*/
 
 }

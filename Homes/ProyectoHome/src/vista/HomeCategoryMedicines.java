@@ -104,10 +104,7 @@ public class HomeCategoryMedicines extends JPanel {
         buttonDolexNi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         this.add(buttonDolexNi);
         buttonDolexNi.setBounds(430, 460, 60, 23);
-        
-        
-        
-        
+    
         
         JDolexNi = new javax.swing.JPanel();
         JDolexNi.setBackground(new java.awt.Color(255, 255, 255));

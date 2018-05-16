@@ -19,9 +19,9 @@ import javax.swing.JTextField;
  */
 public class RegisterUser extends JFrame implements MouseListener {
 
-    public JLabel correoElctronico, Nombres, jLabel4, contraseña, usuario, logoUser, jLabel5, jLabel3, guardar, logoUmedic, atras, umedic, Minimize, Close, Apellidos, direccion;
+    public JLabel correoElctronico, Nombres, jLabel4, contraseña, usuario, logoUser, guardar, logoUmedic, atras, umedic, Minimize, Close, Apellidos, direccion;
     public JPanel JRegistrarse, JIngresar, JAtras, JGuardar;
-    public JTextField textoDireccion, textoContraseña, textoApellidos, textousuario, textoNombres, textoCorreo;
+    public JTextField textoDireccion,  textoApellidos, textousuario, textoNombres, textoCorreo;
     public JPasswordField textContraseña;
     public KGradientPanel kGradientPanel1;
 
@@ -53,7 +53,7 @@ public class RegisterUser extends JFrame implements MouseListener {
         correoElctronico = new javax.swing.JLabel();
         textousuario = new javax.swing.JTextField();
         textoApellidos = new javax.swing.JTextField();
-        textoContraseña = new javax.swing.JTextField();
+        
         textoDireccion = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -131,8 +131,7 @@ public class RegisterUser extends JFrame implements MouseListener {
         Minimize.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         kGradientPanel1.add(Minimize);
         Minimize.setBounds(900, 20, 30, 30);
-        kGradientPanel1.add(jLabel4);
-        jLabel4.setBounds(880, 30, 40, 30);
+        
 
         textoCorreo.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         textoCorreo.setForeground(new java.awt.Color(255, 255, 255));
@@ -185,14 +184,7 @@ public class RegisterUser extends JFrame implements MouseListener {
         kGradientPanel1.add(textoApellidos);
         textoApellidos.setBounds(560, 140, 290, 30);
 
-        textoContraseña.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        textoContraseña.setForeground(new java.awt.Color(255, 255, 255));
-        textoContraseña.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        textoContraseña.setCaretColor(new java.awt.Color(255, 255, 255));
-        textoContraseña.setOpaque(false);
-
-        kGradientPanel1.add(textoContraseña);
-        textoContraseña.setBounds(560, 220, 290, 30);
+        
 
         textoDireccion.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         textoDireccion.setForeground(new java.awt.Color(255, 255, 255));

@@ -15,7 +15,7 @@ import java.awt.event.MouseListener;
  *
  * @author TURKEYTITAN
  */
-public class HomeCategory extends JPanel implements MouseListener {
+public class HomeCategory extends JPanel {
 
     public JLabel accesibilidad, salud, ortopedicos, logoOrtopedicos, belleza, equipos, logoAccesibilidad, logoBelleza, logoEquipos, medicamentos, LogoMedicamentos,
             logoProtesis, protesis;
@@ -126,14 +126,9 @@ public class HomeCategory extends JPanel implements MouseListener {
         JProtesis.setBounds(520, 260, 140, 140);
         JProtesis.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        JMedicamentos.addMouseListener(this);
-        JBelleza.addMouseListener(this);
-        //JAccesibilidad.addMouseListener(this);
-        JOrtopedicos.addMouseListener(this);
-        JEquipos.addMouseListener(this);
-        JProtesis.addMouseListener(this);
+        
     }
-
+/*
     @Override
     public void mouseClicked(MouseEvent me) {
     }
@@ -212,7 +207,7 @@ public class HomeCategory extends JPanel implements MouseListener {
             this.add(JProtesis);
             JProtesis.setBounds(520, 260, 140, 140);
 
-        }*/
+        }
 
     }
 
@@ -282,8 +277,9 @@ public class HomeCategory extends JPanel implements MouseListener {
             this.add(JProtesis);
             JProtesis.setBounds(520, 260, 140, 140);
 
-        }*/
+        }
 
-    }
+    }*/
+
 
 }

@@ -43,6 +43,13 @@ public class Controlador implements MouseListener {
             home.hg.JMedicamentos.addMouseListener(this);
             home.hg.JOrtopedicos.addMouseListener(this);
             home.hg.JProtesis.addMouseListener(this);
+            home.JCategoria.addMouseListener(this);
+            home.JAyuda.addMouseListener(this);
+            home.JAcerca.addMouseListener(this);
+            home.JCarrito.addMouseListener(this);
+            home.close.addMouseListener(this);
+            home.minimize.addMouseListener(this);
+            //home.hg.medicina.buttonGlic
         } else if (view.JRegistrarse.equals(me.getSource())) {
             view.setVisible(false);
             view.registeruser.setVisible(true);
@@ -50,33 +57,72 @@ public class Controlador implements MouseListener {
         } else if (view.registeruser.JAtras.equals(me.getSource())) {
             view.setVisible(true);
             view.registeruser.setVisible(false);
-        } else if (home.JCategoria.equals(me.getSource())) {
-            home.hg.setVisible(true);
-            home.u.setVisible(false);
-            home.e.setVisible(false);
-            home.d.setVisible(false);
-            home.hg.medicina.setVisible(false);
-            home.titleHeader.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-            home.titleHeader.setForeground(new java.awt.Color(204, 204, 204));
-            home.titleHeader.setText("Categoria");
-            home.JHeader.add(home.titleHeader);
-            home.titleHeader.setBounds(100, 30, 230, 50);
-            home.iconHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/CategoryHeader.png"))); // NOI18N
-            home.JHeader.add(home.iconHeader);
-            home.iconHeader.setBounds(30, 30, 90, 50);
-        } else if (home.JAyuda.equals(me.getSource())) {
-            home.e.setVisible(true);
-            home.hg.setVisible(false);
-            home.u.setVisible(false);
-            home.d.setVisible(false);
-            home.titleHeader.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-            home.titleHeader.setForeground(new java.awt.Color(204, 204, 204));
-            home.titleHeader.setText("Ayuda/PQR");
-            home.JHeader.add(home.titleHeader);
-            home.titleHeader.setBounds(100, 30, 230, 50);
-            home.iconHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/SafeHeader.png"))); // NOI18N
-            home.JHeader.add(home.iconHeader);
-            home.iconHeader.setBounds(30, 30, 90, 50);
+        }
+        if (home != null) {
+            if (home.JCategoria.equals(me.getSource())) {
+                home.hg.setVisible(true);
+                home.u.setVisible(false);
+                home.e.setVisible(false);
+                home.d.setVisible(false);
+                home.hg.medicina.setVisible(false);
+                home.titleHeader.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+                home.titleHeader.setForeground(new java.awt.Color(204, 204, 204));
+                home.titleHeader.setText("Categoria");
+                home.JHeader.add(home.titleHeader);
+                home.titleHeader.setBounds(100, 30, 230, 50);
+                home.iconHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/CategoryHeader.png"))); // NOI18N
+                home.JHeader.add(home.iconHeader);
+                home.iconHeader.setBounds(30, 30, 90, 50);
+            } else if (home.JAyuda.equals(me.getSource())) {
+                home.e.setVisible(true);
+                home.hg.setVisible(false);
+                home.u.setVisible(false);
+                home.d.setVisible(false);
+                home.titleHeader.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+                home.titleHeader.setForeground(new java.awt.Color(204, 204, 204));
+                home.titleHeader.setText("Ayuda/PQR");
+                home.JHeader.add(home.titleHeader);
+                home.titleHeader.setBounds(100, 30, 230, 50);
+                home.iconHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/SafeHeader.png"))); // NOI18N
+                home.JHeader.add(home.iconHeader);
+                home.iconHeader.setBounds(30, 30, 90, 50);
+            } else if (home.JAcerca.equals(me.getSource())) {
+                home.e.setVisible(false);
+                home.hg.setVisible(false);
+                home.u.setVisible(true);
+                home.d.setVisible(false);
+
+                home.titleHeader.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+                home.titleHeader.setForeground(new java.awt.Color(204, 204, 204));
+                home.titleHeader.setText("Acerca De...");
+                home.JHeader.add(home.titleHeader);
+                home.titleHeader.setBounds(100, 30, 230, 50);
+                home.iconHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/AcercaHeader.png"))); // NOI18N
+                home.JHeader.add(home.iconHeader);
+                home.iconHeader.setBounds(30, 30, 90, 50);
+
+            } else if (home.JCarrito.equals(me.getSource())) {
+
+                home.titleHeader.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+                home.titleHeader.setForeground(new java.awt.Color(204, 204, 204));
+                home.titleHeader.setText("Compras");
+                home.JHeader.add(home.titleHeader);
+                home.titleHeader.setBounds(100, 30, 230, 50);
+                home.iconHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ComprasHeader.png"))); // NOI18N
+                home.JHeader.add(home.iconHeader);
+                home.iconHeader.setBounds(30, 30, 90, 50);
+
+            } else if (home.minimize.equals(me.getSource())) {
+                home.setState(HomeInicio.ICONIFIED);
+            } else if (home.hg.JMedicamentos.equals(me.getSource())) {
+                home.hg.setVisible(false);
+                home.hg.medicina.setVisible(true);
+                System.out.println("asdasd");
+            } else if (home.close.equals(me.getSource())) {
+
+                System.exit(0);
+
+            }
         }
     }
 
@@ -156,6 +202,16 @@ public class Controlador implements MouseListener {
                 home.hg.add(home.hg.JMedicamentos);
                 home.hg.JMedicamentos.setBounds(80, 260, 140, 140);
                 home.hg.JMedicamentos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            } else if (home.JCategoria.equals(me.getSource())) {
+                home.JCategoria.setBackground(new java.awt.Color(85, 65, 118));
+            } else if (home.JAcerca.equals(me.getSource())) {
+                home.JAcerca.setBackground(new java.awt.Color(85, 65, 118));
+            } else if (home.JAyuda.equals(me.getSource())) {
+                home.JAyuda.setBackground(new java.awt.Color(85, 65, 118));
+            } else if (home.JCarrito.equals(me.getSource())) {
+                home.JCarrito.setBackground(new java.awt.Color(85, 65, 118));
+            } else if (home.JCarrito.equals(me.getSource())) {
+                home.JCarrito.setBackground(new java.awt.Color(85, 65, 118));
             }
 
         }
@@ -216,13 +272,21 @@ public class Controlador implements MouseListener {
                 home.hg.add(home.hg.JEquipos);
                 home.hg.JEquipos.setBounds(520, 50, 140, 140);
             } else if (home.hg.JMedicamentos.equals(me.getSource())) {
-                home.hg.JMedicamentos.setBackground(new java.awt.Color(255,255,255));
+                home.hg.JMedicamentos.setBackground(new java.awt.Color(255, 255, 255));
                 home.hg.medicamentos.setForeground(new Color(0, 0, 0));
                 home.hg.LogoMedicamentos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Salud.png"))); // NOI18N
                 home.hg.JMedicamentos.add(home.hg.LogoMedicamentos);
                 home.hg.LogoMedicamentos.setBounds(40, 30, 70, 70);
                 home.hg.add(home.hg.JMedicamentos);
                 home.hg.JMedicamentos.setBounds(80, 260, 140, 140);
+            } else if (home.JCategoria.equals(me.getSource())) {
+                home.JCategoria.setBackground(new java.awt.Color(54, 33, 89));
+            } else if (home.JAcerca.equals(me.getSource())) {
+                home.JAcerca.setBackground(new java.awt.Color(54, 33, 89));
+            } else if (home.JAyuda.equals(me.getSource())) {
+                home.JAyuda.setBackground(new java.awt.Color(54, 33, 89));
+            } else if (home.JCarrito.equals(me.getSource())) {
+                home.JCarrito.setBackground(new java.awt.Color(54, 33, 89));
             }
         }
     }
