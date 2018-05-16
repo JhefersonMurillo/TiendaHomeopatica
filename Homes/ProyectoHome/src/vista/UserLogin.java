@@ -168,5 +168,10 @@ public class UserLogin extends JFrame implements MouseListener {
     public void mouseExited(MouseEvent me) {
 
     }
-
+    public String getUser(){
+            return this.textUsuario.getText();
+    }
+    public String getPass(){
+            return String.valueOf(this.textContraseña.getPassword());
+    }
 }

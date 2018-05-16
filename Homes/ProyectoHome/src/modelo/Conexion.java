@@ -8,6 +8,7 @@ package modelo;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import vista.RegisterUser;
 
@@ -17,7 +18,7 @@ import vista.RegisterUser;
  */
 public class Conexion {
 
-        private final String URL = "/Tienda.db";
+        private final String URL = "jdbc:sqlite:Tienda.db";
         private Connection conn;
 
         public void conectar() {
@@ -36,20 +37,47 @@ public class Conexion {
                 }
         }
 
-        public void saveAlumno(Usuario usuario, RegisterUser reg) {
-                if (reg.getFilledTexts()) {
-                        try {
-                                PreparedStatement st = conn.prepareStatement("insert into usuario (nombre,usuario,correo,password,direccion) values (?,?,?,?,?)");
-                                st.setString(1, reg.getTextoNombres());
-                                st.setString(2, reg.getTextoUsuario());
-                                st.setString(3, reg.getTextoCorreo());
-                                st.setString(4, reg.getTextPassword());
-                                st.setString(5, reg.getTextoDireccion());
-                                st.execute();
-                        } catch (SQLException ex) {
-                                System.err.println(ex.getMessage());
-                        }
+        public void saveUser(Usuario usuario) {
+                try {
+                        PreparedStatement st = conn.prepareStatement("insert into usuario (nombre,usuario,correo,password,direccion) values (?,?,?,?,?)");
+                        st.setString(1, usuario.getNombre());
+                        st.setString(2, usuario.getUsuario());
+                        st.setString(3, usuario.getCorreo());
+                        st.setString(4, usuario.getPass());
+                        st.setString(5, usuario.getDireccion());
+                        st.execute();
+                } catch (SQLException ex) {
+                        System.err.println(ex.getMessage());
                 }
 
+        }
+        public boolean userExists(String usuario) {
+                ResultSet rs;
+                try {
+                        PreparedStatement st = conn.prepareStatement("select nombre from usuario where usuario = ?");
+                        st.setString(1, usuario);
+                        rs = st.executeQuery();
+                        while (rs.next()) {                                
+                                return false;
+                        }
+                } catch (SQLException ex) {
+                        System.err.println(ex.getMessage());
+                }
+                return true;
+        }
+        public boolean login(Usuario user) {
+                 ResultSet rs;
+                try {
+                        PreparedStatement st = conn.prepareStatement("select nombre from usuario where usuario = ? and password = ?");
+                        st.setString(1, user.getUsuario());
+                        st.setString(2, user.getPass());
+                        rs = st.executeQuery();
+                        while (rs.next()) {                                
+                                return true;
+                        }
+                } catch (SQLException ex) {
+                        System.err.println(ex.getMessage());
+                }
+                return false;
         }
 }
