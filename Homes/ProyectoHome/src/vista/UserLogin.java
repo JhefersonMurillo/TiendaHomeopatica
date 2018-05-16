@@ -15,7 +15,7 @@ import javax.swing.*;
  */
 public class UserLogin extends JFrame implements MouseListener {
 
-    JLabel contraseña, usuario, logoUser, jLabel5, jLabel3, logoUmedic, umedic, Minimize, Close;
+    public JLabel contraseña, usuario, logoUser, jLabel5, jLabel3, logoUmedic, umedic, Minimize, Close;
     public JPanel JRegistrarse, JIngresar;
     public JTextField textUsuario;
     public JPasswordField textContraseña;

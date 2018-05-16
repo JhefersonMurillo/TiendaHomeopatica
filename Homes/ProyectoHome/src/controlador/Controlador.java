@@ -29,8 +29,8 @@ public class Controlador implements MouseListener {
         view.Close.addMouseListener(this);
         view.Minimize.addMouseListener(this);
         //home.category.addMouseListener(this);
-        //view.JRegistrarse.addMouseListener(this);
-//      registeruser.JAtras.addMouseListener(this);
+        view.JRegistrarse.addMouseListener(this);
+        view.registeruser.JAtras.addMouseListener(this);
         //view.registeruser.JAtras.addMouseListener(this);
     }
 
@@ -57,6 +57,7 @@ public class Controlador implements MouseListener {
             home.JCarrito.addMouseListener(this);
             home.close.addMouseListener(this);
             home.minimize.addMouseListener(this);
+            
 
             //home.hg.medicina.buttonGlic
         } else if (view.JRegistrarse.equals(me.getSource())) {
