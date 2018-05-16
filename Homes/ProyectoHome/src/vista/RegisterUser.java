@@ -22,7 +22,7 @@ public class RegisterUser extends JFrame {
     public JLabel correoElctronico, Nombres, jLabel4, contraseña, usuario, logoUser, guardar, logoUmedic, atras, umedic, Minimize, Close, Apellidos, direccion;
     public JPanel JRegistrarse, JIngresar, JAtras, JGuardar;
     public JTextField textoDireccion, textoApellidos, textousuario, textoNombres, textoCorreo;
-    public JPasswordField textContraseña;
+    public JPasswordField textocontraseña;
     public KGradientPanel kGradientPanel1;
 
     public RegisterUser() {
@@ -137,9 +137,18 @@ public class RegisterUser extends JFrame {
         textoCorreo.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         textoCorreo.setCaretColor(new java.awt.Color(255, 255, 255));
         textoCorreo.setOpaque(false);
-
         kGradientPanel1.add(textoCorreo);
         textoCorreo.setBounds(150, 310, 290, 30);
+        
+        textocontraseña= new JPasswordField();
+        textocontraseña.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        textocontraseña.setForeground(new java.awt.Color(255, 255, 255));
+        textocontraseña.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        textocontraseña.setCaretColor(new java.awt.Color(255, 255, 255));
+        textocontraseña.setOpaque(false);
+        kGradientPanel1.add(textocontraseña);
+        textocontraseña.setBounds(560, 220, 290, 30);
+        
 
         contraseña.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         contraseña.setForeground(new java.awt.Color(255, 255, 255));
@@ -218,7 +227,7 @@ public class RegisterUser extends JFrame {
     }
 
     public String getTextPassword() {
-        return String.valueOf(textContraseña.getPassword());
+        return String.valueOf(textocontraseña.getPassword());
     }
 
     public Boolean getFilledTexts() {
