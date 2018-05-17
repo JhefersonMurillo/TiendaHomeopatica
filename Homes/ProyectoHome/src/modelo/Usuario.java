@@ -11,7 +11,6 @@ package modelo;
  */
 public class Usuario {
     private String nombre;
-    private String apellido;
     private String correo;
     private String usuario;
     private String pass;
@@ -20,9 +19,8 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String nombre, String apellido, String correo, String usuario, String pass, String direccion) {
+    public Usuario(String nombre, String correo, String usuario, String pass, String direccion) {
         this.nombre = nombre;
-        this.apellido = apellido;
         this.correo = correo;
         this.usuario = usuario;
         this.pass = pass;
@@ -35,14 +33,6 @@ public class Usuario {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
     }
 
     public String getCorreo() {
