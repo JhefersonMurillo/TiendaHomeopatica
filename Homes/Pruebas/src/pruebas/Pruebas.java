@@ -16,7 +16,7 @@ public class Pruebas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       PruebasLogin n= new PruebasLogin();
+       Pruebas1 n= new Pruebas1();
        n.setVisible(true);
        n.setSize(1000,610);
     }

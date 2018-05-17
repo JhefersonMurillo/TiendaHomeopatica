@@ -27,231 +27,35 @@ public class Pruebas1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Izquierda = new javax.swing.JPanel();
-        JCategoria = new javax.swing.JPanel();
-        categoriasl = new javax.swing.JLabel();
-        category = new javax.swing.JLabel();
-        JCarrito = new javax.swing.JPanel();
-        comprasl = new javax.swing.JLabel();
-        buy = new javax.swing.JLabel();
-        JAyuda = new javax.swing.JPanel();
-        ayudal = new javax.swing.JLabel();
-        safe = new javax.swing.JLabel();
-        JAcerca = new javax.swing.JPanel();
-        acercaL = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        help = new javax.swing.JLabel();
-        JHeader = new javax.swing.JPanel();
-        minimize = new javax.swing.JLabel();
-        close = new javax.swing.JLabel();
-        titleHeader = new javax.swing.JLabel();
-        iconHeader = new javax.swing.JLabel();
         JBody = new javax.swing.JPanel();
-        JCorrector = new javax.swing.JPanel();
-        correcto = new javax.swing.JLabel();
-        JAlmohada = new javax.swing.JPanel();
-        almohada = new javax.swing.JLabel();
-        priceCorrector = new javax.swing.JLabel();
-        priceAlmohada = new javax.swing.JLabel();
-        buttonCorrector = new javax.swing.JButton();
-        buttonAlmohada = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(null);
 
-        Izquierda.setBackground(new java.awt.Color(54, 33, 89));
-        Izquierda.setPreferredSize(new java.awt.Dimension(270, 610));
-        Izquierda.setLayout(null);
-
-        JCategoria.setBackground(new java.awt.Color(85, 65, 118));
-        JCategoria.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 2, 0));
-        JCategoria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        JCategoria.setPreferredSize(new java.awt.Dimension(270, 40));
-        JCategoria.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CategoryClick(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                JCategoriaMouseEntered(evt);
-            }
-        });
-        JCategoria.setLayout(null);
-
-        categoriasl.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        categoriasl.setForeground(new java.awt.Color(204, 204, 204));
-        categoriasl.setText("Categorias");
-        JCategoria.add(categoriasl);
-        categoriasl.setBounds(90, 10, 150, 20);
-
-        category.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Category30.png"))); // NOI18N
-        JCategoria.add(category);
-        category.setBounds(21, 11, 40, 20);
-
-        Izquierda.add(JCategoria);
-        JCategoria.setBounds(0, 220, 270, 40);
-
-        JCarrito.setBackground(new java.awt.Color(85, 65, 118));
-        JCarrito.setPreferredSize(new java.awt.Dimension(270, 40));
-        JCarrito.setLayout(null);
-
-        comprasl.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        comprasl.setForeground(new java.awt.Color(204, 204, 204));
-        comprasl.setText("Compras");
-        JCarrito.add(comprasl);
-        comprasl.setBounds(90, 10, 150, 20);
-
-        buy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Compras25.png"))); // NOI18N
-        JCarrito.add(buy);
-        buy.setBounds(20, 0, 32, 40);
-
-        Izquierda.add(JCarrito);
-        JCarrito.setBounds(0, 260, 270, 40);
-
-        JAyuda.setBackground(new java.awt.Color(85, 65, 118));
-        JAyuda.setPreferredSize(new java.awt.Dimension(270, 40));
-        JAyuda.setLayout(null);
-
-        ayudal.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        ayudal.setForeground(new java.awt.Color(204, 204, 204));
-        ayudal.setText("Ayuda/PQR");
-        JAyuda.add(ayudal);
-        ayudal.setBounds(90, 10, 150, 20);
-
-        safe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/25.png"))); // NOI18N
-        JAyuda.add(safe);
-        safe.setBounds(20, 0, 32, 40);
-
-        Izquierda.add(JAyuda);
-        JAyuda.setBounds(0, 300, 270, 40);
-
-        JAcerca.setBackground(new java.awt.Color(85, 65, 118));
-        JAcerca.setPreferredSize(new java.awt.Dimension(270, 40));
-        JAcerca.setLayout(null);
-
-        acercaL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        acercaL.setForeground(new java.awt.Color(204, 204, 204));
-        acercaL.setText("Acerca de ");
-        JAcerca.add(acercaL);
-        acercaL.setBounds(90, 10, 150, 20);
-        JAcerca.add(jLabel7);
-        jLabel7.setBounds(20, 10, 32, 0);
-
-        help.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Acerca25.png"))); // NOI18N
-        JAcerca.add(help);
-        help.setBounds(20, 0, 32, 30);
-
-        Izquierda.add(JAcerca);
-        JAcerca.setBounds(0, 340, 270, 40);
-
-        getContentPane().add(Izquierda);
-        Izquierda.setBounds(0, 0, 270, 630);
-
-        JHeader.setBackground(new java.awt.Color(100, 25, 115));
-        JHeader.setLayout(null);
-
-        minimize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/minimize.png"))); // NOI18N
-        JHeader.add(minimize);
-        minimize.setBounds(670, 10, 20, 20);
-
-        close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Close20.png"))); // NOI18N
-        JHeader.add(close);
-        close.setBounds(700, 10, 20, 20);
-
-        titleHeader.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        titleHeader.setForeground(new java.awt.Color(204, 204, 204));
-        titleHeader.setText("Categoria");
-        JHeader.add(titleHeader);
-        titleHeader.setBounds(100, 30, 230, 50);
-
-        iconHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/CategoryHeader.png"))); // NOI18N
-        JHeader.add(iconHeader);
-        iconHeader.setBounds(30, 30, 90, 50);
-
-        getContentPane().add(JHeader);
-        JHeader.setBounds(270, 0, 730, 120);
-
         JBody.setBackground(new java.awt.Color(235, 235, 235));
-        JBody.setLayout(null);
+        JBody.setLayout(new java.awt.GridLayout(0, 3, 20, 0));
 
-        JCorrector.setBackground(new java.awt.Color(255, 255, 255));
-        JCorrector.setLayout(null);
+        jPanel1.setLayout(new java.awt.GridLayout(2, 0));
 
-        correcto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Corrector.png"))); // NOI18N
-        correcto.setText("jLabel1");
-        JCorrector.add(correcto);
-        correcto.setBounds(20, 20, 150, 140);
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("jLabel3");
+        jPanel1.add(jLabel3);
 
-        JBody.add(JCorrector);
-        JCorrector.setBounds(110, 130, 190, 170);
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("jLabel3");
+        jPanel1.add(jLabel4);
 
-        JAlmohada.setBackground(new java.awt.Color(255, 255, 255));
-        JAlmohada.setLayout(null);
-
-        almohada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/AlmohadaOrtopedica.png"))); // NOI18N
-        JAlmohada.add(almohada);
-        almohada.setBounds(20, 20, 150, 130);
-
-        JBody.add(JAlmohada);
-        JAlmohada.setBounds(420, 130, 190, 170);
-
-        priceCorrector.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        priceCorrector.setText("$ 25.900");
-        JBody.add(priceCorrector);
-        priceCorrector.setBounds(110, 320, 110, 40);
-
-        priceAlmohada.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        priceAlmohada.setText("$ 69.900");
-        JBody.add(priceAlmohada);
-        priceAlmohada.setBounds(420, 320, 110, 40);
-
-        buttonCorrector.setBackground(new java.awt.Color(100, 25, 115));
-        buttonCorrector.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
-        buttonCorrector.setForeground(new java.awt.Color(204, 204, 204));
-        buttonCorrector.setText("Add");
-        buttonCorrector.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        buttonCorrector.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonCorrectorActionPerformed(evt);
-            }
-        });
-        JBody.add(buttonCorrector);
-        buttonCorrector.setBounds(240, 330, 60, 23);
-
-        buttonAlmohada.setBackground(new java.awt.Color(100, 25, 115));
-        buttonAlmohada.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
-        buttonAlmohada.setForeground(new java.awt.Color(204, 204, 204));
-        buttonAlmohada.setText("Add");
-        buttonAlmohada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        buttonAlmohada.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAlmohadaActionPerformed(evt);
-            }
-        });
-        JBody.add(buttonAlmohada);
-        buttonAlmohada.setBounds(550, 330, 60, 23);
+        JBody.add(jPanel1);
 
         getContentPane().add(JBody);
         JBody.setBounds(270, 120, 730, 500);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void CategoryClick(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CategoryClick
-        
-    }//GEN-LAST:event_CategoryClick
-
-    private void JCategoriaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JCategoriaMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JCategoriaMouseEntered
-
-    private void buttonAlmohadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAlmohadaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonAlmohadaActionPerformed
-
-    private void buttonCorrectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCorrectorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonCorrectorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -289,33 +93,9 @@ public class Pruebas1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Izquierda;
-    private javax.swing.JPanel JAcerca;
-    private javax.swing.JPanel JAlmohada;
-    private javax.swing.JPanel JAyuda;
     private javax.swing.JPanel JBody;
-    private javax.swing.JPanel JCarrito;
-    private javax.swing.JPanel JCategoria;
-    private javax.swing.JPanel JCorrector;
-    private javax.swing.JPanel JHeader;
-    private javax.swing.JLabel acercaL;
-    private javax.swing.JLabel almohada;
-    private javax.swing.JLabel ayudal;
-    private javax.swing.JButton buttonAlmohada;
-    private javax.swing.JButton buttonCorrector;
-    private javax.swing.JLabel buy;
-    private javax.swing.JLabel categoriasl;
-    private javax.swing.JLabel category;
-    private javax.swing.JLabel close;
-    private javax.swing.JLabel comprasl;
-    private javax.swing.JLabel correcto;
-    private javax.swing.JLabel help;
-    private javax.swing.JLabel iconHeader;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel minimize;
-    private javax.swing.JLabel priceAlmohada;
-    private javax.swing.JLabel priceCorrector;
-    private javax.swing.JLabel safe;
-    private javax.swing.JLabel titleHeader;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
