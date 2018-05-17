@@ -106,8 +106,9 @@ public class Controlador implements MouseListener, ActionListener {
 				ids += ",";
 			}
 		}
-		System.out.println(ids);
+		con.conectar();
 		this.prod = con.cargarCarrito(ids);
+		con.close();
 		pProducto = new JPanel[prod.size()];
 		int i = 0;
 		for (Iterator<Producto> iterator = this.prod.iterator(); iterator.hasNext();) {
@@ -125,7 +126,7 @@ public class Controlador implements MouseListener, ActionListener {
 
 			pProducto[i].add(nombre);
 			pProducto[i].add(precio);
-			home.car.add(pProducto[i]);
+			home.car.GridPanel.add(pProducto[i]);
 			i++;
 			System.out.println(2);
 		}

@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -87,13 +88,16 @@ public class Conexion {
 	public ArrayList<Producto> cargarCarrito(String pro) {
 		ResultSet rs;
 		ArrayList<Producto> prod = new ArrayList<>();
+		System.out.println("cargarCarrito");
 		try {
-			PreparedStatement st = conn.prepareStatement("select * from producto where id in(?)");
+			PreparedStatement st = conn.prepareStatement("select * from producto where ?");
 			st.setString(1, pro);
+			System.out.println(st.toString());
 			rs = st.executeQuery();
+			System.out.println(rs.next());
 			while (rs.next()) {
+				System.out.println( rs.getString("nombre"));
 				prod.add(new Producto(rs.getLong("id"), rs.getString("nombre"), rs.getDouble("precio"), 0));
-				System.out.println(prod.get(0).getNombre());
 			}
 		} catch (SQLException ex) {
 			System.err.println(ex.getMessage());
