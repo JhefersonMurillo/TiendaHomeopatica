@@ -22,6 +22,10 @@ public class HomeCategory extends JPanel {
     public JPanel JAccesibilidad, JBelleza, JEquipos, JMedicamentos, JOrtopedicos, JProtesis;
 
     public HomeCategoryMedicines medicina;
+    public HomeCategoryAccessibility accesibility;
+    public HomeCategoryBelleza bellezas;
+    public HomeCategoryEquipos VistaEquipos;
+    public HomeCategoryOrtopedico VistaOrtopedico;
 
    public HomeCategory() {
 

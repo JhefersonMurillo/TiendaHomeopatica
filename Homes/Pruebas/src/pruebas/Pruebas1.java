@@ -47,30 +47,14 @@ public class Pruebas1 extends javax.swing.JFrame {
         titleHeader = new javax.swing.JLabel();
         iconHeader = new javax.swing.JLabel();
         JBody = new javax.swing.JPanel();
-        JClig = new javax.swing.JPanel();
-        Glig = new javax.swing.JLabel();
-        JTricovi = new javax.swing.JPanel();
-        Tricovit = new javax.swing.JLabel();
-        JDolexNi = new javax.swing.JPanel();
-        Dolexni = new javax.swing.JLabel();
-        JDolfenox = new javax.swing.JPanel();
-        Dolfenox = new javax.swing.JLabel();
-        JDolex = new javax.swing.JPanel();
-        Dolex = new javax.swing.JLabel();
-        JVoltaren = new javax.swing.JPanel();
-        voltaren = new javax.swing.JLabel();
-        priceDolfenox = new javax.swing.JLabel();
-        priceGli = new javax.swing.JLabel();
-        PriceDolex = new javax.swing.JLabel();
-        priceTricovi = new javax.swing.JLabel();
-        PriceVoltaren = new javax.swing.JLabel();
-        priceDolexNi = new javax.swing.JLabel();
-        buttonDolfenox = new javax.swing.JButton();
-        buttonGlic = new javax.swing.JButton();
-        butonDolex = new javax.swing.JButton();
-        buttonTricovit = new javax.swing.JButton();
-        buttonVoltaren = new javax.swing.JButton();
-        buttonDolexNi = new javax.swing.JButton();
+        JCorrector = new javax.swing.JPanel();
+        correcto = new javax.swing.JLabel();
+        JAlmohada = new javax.swing.JPanel();
+        almohada = new javax.swing.JLabel();
+        priceCorrector = new javax.swing.JLabel();
+        priceAlmohada = new javax.swing.JLabel();
+        buttonCorrector = new javax.swing.JButton();
+        buttonAlmohada = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -190,174 +174,62 @@ public class Pruebas1 extends javax.swing.JFrame {
         JBody.setBackground(new java.awt.Color(235, 235, 235));
         JBody.setLayout(null);
 
-        JClig.setBackground(new java.awt.Color(255, 255, 255));
-        JClig.setLayout(null);
+        JCorrector.setBackground(new java.awt.Color(255, 255, 255));
+        JCorrector.setLayout(null);
 
-        Glig.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Bloqueadro.png"))); // NOI18N
-        Glig.setText("jLabel1");
-        JClig.add(Glig);
-        Glig.setBounds(30, 10, 120, 150);
+        correcto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Corrector.png"))); // NOI18N
+        correcto.setText("jLabel1");
+        JCorrector.add(correcto);
+        correcto.setBounds(20, 20, 150, 140);
 
-        JBody.add(JClig);
-        JClig.setBounds(60, 20, 190, 170);
+        JBody.add(JCorrector);
+        JCorrector.setBounds(110, 130, 190, 170);
 
-        JTricovi.setBackground(new java.awt.Color(255, 255, 255));
-        JTricovi.setLayout(null);
+        JAlmohada.setBackground(new java.awt.Color(255, 255, 255));
+        JAlmohada.setLayout(null);
 
-        Tricovit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Trivol.PNG"))); // NOI18N
-        JTricovi.add(Tricovit);
-        Tricovit.setBounds(-10, 10, 210, 200);
+        almohada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/AlmohadaOrtopedica.png"))); // NOI18N
+        JAlmohada.add(almohada);
+        almohada.setBounds(20, 20, 150, 130);
 
-        JBody.add(JTricovi);
-        JTricovi.setBounds(530, 20, 190, 170);
+        JBody.add(JAlmohada);
+        JAlmohada.setBounds(420, 130, 190, 170);
 
-        JDolexNi.setBackground(new java.awt.Color(255, 255, 255));
-        JDolexNi.setLayout(null);
+        priceCorrector.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        priceCorrector.setText("$ 25.900");
+        JBody.add(priceCorrector);
+        priceCorrector.setBounds(110, 320, 110, 40);
 
-        Dolexni.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/DolexNiño.PNG"))); // NOI18N
-        JDolexNi.add(Dolexni);
-        Dolexni.setBounds(20, 10, 120, 120);
+        priceAlmohada.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        priceAlmohada.setText("$ 69.900");
+        JBody.add(priceAlmohada);
+        priceAlmohada.setBounds(420, 320, 110, 40);
 
-        JBody.add(JDolexNi);
-        JDolexNi.setBounds(300, 280, 190, 160);
-
-        JDolfenox.setBackground(new java.awt.Color(255, 255, 255));
-        JDolfenox.setLayout(null);
-
-        Dolfenox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Dolfe.PNG"))); // NOI18N
-        JDolfenox.add(Dolfenox);
-        Dolfenox.setBounds(20, 10, 160, 120);
-
-        JBody.add(JDolfenox);
-        JDolfenox.setBounds(60, 280, 190, 160);
-
-        JDolex.setBackground(new java.awt.Color(255, 255, 255));
-        JDolex.setLayout(null);
-
-        Dolex.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Dolex.png"))); // NOI18N
-        JDolex.add(Dolex);
-        Dolex.setBounds(20, 30, 160, 130);
-
-        JBody.add(JDolex);
-        JDolex.setBounds(300, 20, 190, 170);
-
-        JVoltaren.setBackground(new java.awt.Color(255, 255, 255));
-        JVoltaren.setLayout(null);
-
-        voltaren.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/asad.png"))); // NOI18N
-        JVoltaren.add(voltaren);
-        voltaren.setBounds(0, 30, 180, 100);
-
-        JBody.add(JVoltaren);
-        JVoltaren.setBounds(530, 280, 190, 160);
-
-        priceDolfenox.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        priceDolfenox.setText("$ 30.650");
-        JBody.add(priceDolfenox);
-        priceDolfenox.setBounds(60, 450, 100, 40);
-
-        priceGli.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        priceGli.setText("$ 81.050");
-        JBody.add(priceGli);
-        priceGli.setBounds(50, 210, 100, 40);
-
-        PriceDolex.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        PriceDolex.setText("$ 48.100");
-        JBody.add(PriceDolex);
-        PriceDolex.setBounds(300, 210, 100, 40);
-
-        priceTricovi.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        priceTricovi.setText("$ 173.900");
-        JBody.add(priceTricovi);
-        priceTricovi.setBounds(530, 210, 110, 40);
-
-        PriceVoltaren.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        PriceVoltaren.setText("$ 68.300");
-        JBody.add(PriceVoltaren);
-        PriceVoltaren.setBounds(530, 450, 100, 40);
-
-        priceDolexNi.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        priceDolexNi.setText("$ 19.200");
-        JBody.add(priceDolexNi);
-        priceDolexNi.setBounds(300, 450, 100, 40);
-
-        buttonDolfenox.setBackground(new java.awt.Color(100, 25, 115));
-        buttonDolfenox.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
-        buttonDolfenox.setForeground(new java.awt.Color(204, 204, 204));
-        buttonDolfenox.setText("Add");
-        buttonDolfenox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        buttonDolfenox.addActionListener(new java.awt.event.ActionListener() {
+        buttonCorrector.setBackground(new java.awt.Color(100, 25, 115));
+        buttonCorrector.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
+        buttonCorrector.setForeground(new java.awt.Color(204, 204, 204));
+        buttonCorrector.setText("Add");
+        buttonCorrector.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttonCorrector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonDolfenoxActionPerformed(evt);
+                buttonCorrectorActionPerformed(evt);
             }
         });
-        JBody.add(buttonDolfenox);
-        buttonDolfenox.setBounds(190, 460, 60, 23);
+        JBody.add(buttonCorrector);
+        buttonCorrector.setBounds(240, 330, 60, 23);
 
-        buttonGlic.setBackground(new java.awt.Color(100, 25, 115));
-        buttonGlic.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
-        buttonGlic.setForeground(new java.awt.Color(204, 204, 204));
-        buttonGlic.setText("Add");
-        buttonGlic.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        buttonGlic.addActionListener(new java.awt.event.ActionListener() {
+        buttonAlmohada.setBackground(new java.awt.Color(100, 25, 115));
+        buttonAlmohada.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
+        buttonAlmohada.setForeground(new java.awt.Color(204, 204, 204));
+        buttonAlmohada.setText("Add");
+        buttonAlmohada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttonAlmohada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonGlicActionPerformed(evt);
+                buttonAlmohadaActionPerformed(evt);
             }
         });
-        JBody.add(buttonGlic);
-        buttonGlic.setBounds(180, 220, 60, 23);
-
-        butonDolex.setBackground(new java.awt.Color(100, 25, 115));
-        butonDolex.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
-        butonDolex.setForeground(new java.awt.Color(204, 204, 204));
-        butonDolex.setText("Add");
-        butonDolex.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        butonDolex.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butonDolexActionPerformed(evt);
-            }
-        });
-        JBody.add(butonDolex);
-        butonDolex.setBounds(430, 220, 60, 23);
-
-        buttonTricovit.setBackground(new java.awt.Color(100, 25, 115));
-        buttonTricovit.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
-        buttonTricovit.setForeground(new java.awt.Color(204, 204, 204));
-        buttonTricovit.setText("Add");
-        buttonTricovit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        buttonTricovit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonTricovitActionPerformed(evt);
-            }
-        });
-        JBody.add(buttonTricovit);
-        buttonTricovit.setBounds(650, 220, 60, 23);
-
-        buttonVoltaren.setBackground(new java.awt.Color(100, 25, 115));
-        buttonVoltaren.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
-        buttonVoltaren.setForeground(new java.awt.Color(204, 204, 204));
-        buttonVoltaren.setText("Add");
-        buttonVoltaren.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        buttonVoltaren.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonVoltarenActionPerformed(evt);
-            }
-        });
-        JBody.add(buttonVoltaren);
-        buttonVoltaren.setBounds(660, 460, 60, 23);
-
-        buttonDolexNi.setBackground(new java.awt.Color(100, 25, 115));
-        buttonDolexNi.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
-        buttonDolexNi.setForeground(new java.awt.Color(204, 204, 204));
-        buttonDolexNi.setText("Add");
-        buttonDolexNi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        buttonDolexNi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonDolexNiActionPerformed(evt);
-            }
-        });
-        JBody.add(buttonDolexNi);
-        buttonDolexNi.setBounds(430, 460, 60, 23);
+        JBody.add(buttonAlmohada);
+        buttonAlmohada.setBounds(550, 330, 60, 23);
 
         getContentPane().add(JBody);
         JBody.setBounds(270, 120, 730, 500);
@@ -373,29 +245,13 @@ public class Pruebas1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JCategoriaMouseEntered
 
-    private void buttonDolfenoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDolfenoxActionPerformed
+    private void buttonAlmohadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAlmohadaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_buttonDolfenoxActionPerformed
+    }//GEN-LAST:event_buttonAlmohadaActionPerformed
 
-    private void buttonGlicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGlicActionPerformed
+    private void buttonCorrectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCorrectorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_buttonGlicActionPerformed
-
-    private void butonDolexActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butonDolexActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_butonDolexActionPerformed
-
-    private void buttonTricovitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonTricovitActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonTricovitActionPerformed
-
-    private void buttonVoltarenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonVoltarenActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonVoltarenActionPerformed
-
-    private void buttonDolexNiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDolexNiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonDolexNiActionPerformed
+    }//GEN-LAST:event_buttonCorrectorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -433,49 +289,33 @@ public class Pruebas1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Dolex;
-    private javax.swing.JLabel Dolexni;
-    private javax.swing.JLabel Dolfenox;
-    private javax.swing.JLabel Glig;
     private javax.swing.JPanel Izquierda;
     private javax.swing.JPanel JAcerca;
+    private javax.swing.JPanel JAlmohada;
     private javax.swing.JPanel JAyuda;
     private javax.swing.JPanel JBody;
     private javax.swing.JPanel JCarrito;
     private javax.swing.JPanel JCategoria;
-    private javax.swing.JPanel JClig;
-    private javax.swing.JPanel JDolex;
-    private javax.swing.JPanel JDolexNi;
-    private javax.swing.JPanel JDolfenox;
+    private javax.swing.JPanel JCorrector;
     private javax.swing.JPanel JHeader;
-    private javax.swing.JPanel JTricovi;
-    private javax.swing.JPanel JVoltaren;
-    private javax.swing.JLabel PriceDolex;
-    private javax.swing.JLabel PriceVoltaren;
-    private javax.swing.JLabel Tricovit;
     private javax.swing.JLabel acercaL;
+    private javax.swing.JLabel almohada;
     private javax.swing.JLabel ayudal;
-    private javax.swing.JButton butonDolex;
-    private javax.swing.JButton buttonDolexNi;
-    private javax.swing.JButton buttonDolfenox;
-    private javax.swing.JButton buttonGlic;
-    private javax.swing.JButton buttonTricovit;
-    private javax.swing.JButton buttonVoltaren;
+    private javax.swing.JButton buttonAlmohada;
+    private javax.swing.JButton buttonCorrector;
     private javax.swing.JLabel buy;
     private javax.swing.JLabel categoriasl;
     private javax.swing.JLabel category;
     private javax.swing.JLabel close;
     private javax.swing.JLabel comprasl;
+    private javax.swing.JLabel correcto;
     private javax.swing.JLabel help;
     private javax.swing.JLabel iconHeader;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel minimize;
-    private javax.swing.JLabel priceDolexNi;
-    private javax.swing.JLabel priceDolfenox;
-    private javax.swing.JLabel priceGli;
-    private javax.swing.JLabel priceTricovi;
+    private javax.swing.JLabel priceAlmohada;
+    private javax.swing.JLabel priceCorrector;
     private javax.swing.JLabel safe;
     private javax.swing.JLabel titleHeader;
-    private javax.swing.JLabel voltaren;
     // End of variables declaration//GEN-END:variables
 }

@@ -140,6 +140,10 @@ public class Controlador implements MouseListener {
                 home.e.setVisible(false);
                 home.d.setVisible(false);
                 home.hg.medicina.setVisible(false);
+                home.hg.bellezas.setVisible(false);
+                home.hg.accesibility.setVisible(false);
+                home.hg.VistaEquipos.setVisible(false);
+                home.hg.VistaOrtopedico.setVisible(false);
                 home.titleHeader.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
                 home.titleHeader.setForeground(new java.awt.Color(204, 204, 204));
                 home.titleHeader.setText("Categoria");
@@ -192,11 +196,64 @@ public class Controlador implements MouseListener {
             } else if (home.hg.JMedicamentos.equals(me.getSource())) {
                 home.hg.setVisible(false);
                 home.hg.medicina.setVisible(true);
+                home.titleHeader.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+                home.titleHeader.setForeground(new java.awt.Color(204, 204, 204));
+                home.titleHeader.setText("Medicamentos");
+                home.JHeader.add(home.titleHeader);
+                home.titleHeader.setBounds(100, 30, 230, 50);
+                home.iconHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/GrisMedicamento.png"))); // NOI18N
+                home.JHeader.add(home.iconHeader);
+                home.iconHeader.setBounds(30, 30, 90, 50);
+                
                 System.out.println("asdasd");
             } else if (home.close.equals(me.getSource())) {
 
                 System.exit(0);
 
+            } else if (home.hg.JBelleza.equals(me.getSource())) {
+                home.hg.setVisible(false);
+                home.hg.bellezas.setVisible(true);
+                home.titleHeader.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+                home.titleHeader.setForeground(new java.awt.Color(204, 204, 204));
+                home.titleHeader.setText("Belleza");
+                home.JHeader.add(home.titleHeader);
+                home.titleHeader.setBounds(100, 30, 230, 50);
+                home.iconHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/GrisBelleza.png"))); // NOI18N
+                home.JHeader.add(home.iconHeader);
+                home.iconHeader.setBounds(30, 30, 90, 50);
+            }else if (home.hg.JAccesibilidad.equals(me.getSource())) {
+                home.hg.setVisible(false);
+                home.hg.accesibility.setVisible(true);
+                home.titleHeader.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+                home.titleHeader.setForeground(new java.awt.Color(204, 204, 204));
+                home.titleHeader.setText("Accesibilidad");
+                home.JHeader.add(home.titleHeader);
+                home.titleHeader.setBounds(100, 30, 230, 50);
+                home.iconHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/GrisAccesibilidad.png"))); // NOI18N
+                home.JHeader.add(home.iconHeader);
+                home.iconHeader.setBounds(30, 30, 90, 50);
+            }else if (home.hg.JEquipos.equals(me.getSource())) {
+                home.hg.setVisible(false);
+                home.hg.VistaEquipos.setVisible(true);
+                home.titleHeader.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+                home.titleHeader.setForeground(new java.awt.Color(204, 204, 204));
+                home.titleHeader.setText("Equipos");
+                home.JHeader.add(home.titleHeader);
+                home.titleHeader.setBounds(100, 30, 230, 50);
+                home.iconHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/GrisEquipos.png"))); // NOI18N
+                home.JHeader.add(home.iconHeader);
+                home.iconHeader.setBounds(30, 30, 90, 50);
+            }else if (home.hg.JOrtopedicos.equals(me.getSource())) {
+                home.hg.setVisible(false);
+                home.hg.VistaEquipos.setVisible(true);
+                home.titleHeader.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+                home.titleHeader.setForeground(new java.awt.Color(204, 204, 204));
+                home.titleHeader.setText("Ortopedicos");
+                home.JHeader.add(home.titleHeader);
+                home.titleHeader.setBounds(100, 30, 230, 50);
+                home.iconHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/GrisOrtopedico.png"))); // NOI18N
+                home.JHeader.add(home.iconHeader);
+                home.iconHeader.setBounds(30, 30, 90, 50);
             }
         }
     }

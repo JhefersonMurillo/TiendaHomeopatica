@@ -52,12 +52,7 @@ public class HomeInicio extends JFrame  {
         up = new JSeparator();
         up.setBounds(40, 132, 200, 10);
         izquierda.add(up);
-        /*izquierda = new JPanel();
-        izquierda.setLayout(null);
-         */
-        //this.setResizable(false);
-        //this.setUndecorated(true);
-
+     
         JAcerca = new javax.swing.JPanel();
         JAcerca.setBackground(new java.awt.Color(54, 33, 89));
         JAcerca.setPreferredSize(new java.awt.Dimension(270, 40));
@@ -164,13 +159,7 @@ public class HomeInicio extends JFrame  {
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        //JCategoria.addMouseListener(this);
-        //JAyuda.addMouseListener(this);
-        //JAcerca.addMouseListener(this);
-        //JCarrito.addMouseListener(this);
-        //close.addMouseListener(this);
-        //minimize.addMouseListener(this);
-
+       
         u = new HomeInformation();
         this.add(u);
         u.setBounds(270, 120, 730, 450);
@@ -184,7 +173,6 @@ public class HomeInicio extends JFrame  {
         hg.JBelleza.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         hg.JEquipos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         hg.JMedicamentos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        //hg.JMedicamentos.addMouseListener(this);
         hg.JOrtopedicos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         hg.JProtesis.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -198,16 +186,36 @@ public class HomeInicio extends JFrame  {
         d.setBounds(270, 120, 730, 450);
         d.setVisible(true);
 
-       // JCategoria.addMouseListener(this);
+       
         hg.medicina = new HomeCategoryMedicines();
-
         this.add(hg.medicina);
         hg.medicina.setBounds(250, 100, 730, 500);
         hg.medicina.setVisible(false);
-    }/*
+        
+        hg.accesibility = new HomeCategoryAccessibility();
+        this.add(hg.accesibility);
+        hg.accesibility.setBounds(250,100,730,500);
+        hg.accesibility.setVisible(false);
+        
+        hg.bellezas = new HomeCategoryBelleza();
+        this.add(hg.bellezas);
+        hg.bellezas.setBounds(250,100,730,500);
+        hg.bellezas.setVisible(false);
+        
+        hg.VistaEquipos = new HomeCategoryEquipos();
+        this.add(hg.VistaEquipos);
+        hg.VistaEquipos.setBounds(250,100,730,500);
+        hg.VistaEquipos.setVisible(false);
+        
+        hg.VistaOrtopedico = new HomeCategoryOrtopedico();
+        this.add(hg.VistaOrtopedico);
+        hg.VistaOrtopedico.setBounds(250,100,730,500);
+        hg.VistaOrtopedico.setVisible(false);
+        
+    }
 
-    @Override
-    public void mouseClicked(java.awt.event.MouseEvent me) {
+    //@Override
+    //public void mouseClicked(java.awt.event.MouseEvent me) {
        // if (JCategoria.equals(me.getSource())) {
             /*hg.setVisible(true);
             u.setVisible(false);
