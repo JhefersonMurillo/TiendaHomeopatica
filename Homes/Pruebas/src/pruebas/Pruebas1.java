@@ -31,6 +31,7 @@ public class Pruebas1 extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        comprar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -53,6 +54,10 @@ public class Pruebas1 extends javax.swing.JFrame {
 
         getContentPane().add(JBody);
         JBody.setBounds(270, 120, 730, 500);
+
+        comprar.setText("Comprar");
+        getContentPane().add(comprar);
+        comprar.setBounds(620, 90, 73, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -94,6 +99,7 @@ public class Pruebas1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel JBody;
+    private javax.swing.JButton comprar;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;

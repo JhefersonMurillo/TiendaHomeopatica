@@ -1,11 +1,16 @@
 package controlador;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import modelo.Conexion;
 import modelo.Producto;
 import modelo.Usuario;
@@ -17,14 +22,16 @@ import vista.UserLogin;
  *
  * @author TURNKEYTITAN
  */
-public class Controlador implements MouseListener {
+public class Controlador implements MouseListener, ActionListener {
 
 	private UserLogin view;
 	private Usuario userModel;
 	private HomeInicio home;
 	private RegisterUser registeruser;
 	private Conexion con;
-	private List<Integer> producto;
+	private ArrayList<Integer> producto;
+	private ArrayList<Producto> prod;
+	public JPanel pProducto[];
 
 	@SuppressWarnings("LeakingThisInConstructor")
 	public Controlador(UserLogin userlogin, Conexion m) {
@@ -90,6 +97,40 @@ public class Controlador implements MouseListener {
 		return false;
 	}
 
+	public void cargarCarrito(ArrayList<Integer> prod) {
+		String ids = "";
+		for (Iterator<Integer> iterator = prod.iterator(); iterator.hasNext();) {
+			int next = iterator.next();
+			ids += Integer.toString(next);
+			if (iterator.hasNext()) {
+				ids += ",";
+			}
+		}
+		System.out.println(ids);
+		this.prod = con.cargarCarrito(ids);
+		pProducto = new JPanel[prod.size()];
+		int i = 0;
+		for (Iterator<Producto> iterator = this.prod.iterator(); iterator.hasNext();) {
+			Producto next = iterator.next();
+			JLabel nombre = new javax.swing.JLabel();
+			nombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+			nombre.setText(next.getNombre());
+
+			JLabel precio = new javax.swing.JLabel();
+			precio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+			precio.setText(Double.toString(next.getPrecio()));
+
+			pProducto[i] = new JPanel();
+			pProducto[i].setLayout(new java.awt.GridLayout(2, 0));
+
+			pProducto[i].add(nombre);
+			pProducto[i].add(precio);
+			home.car.add(pProducto[i]);
+			i++;
+			System.out.println(2);
+		}
+	}
+
 	@Override
 	public void mouseClicked(MouseEvent me) {
 		if (view.registeruser.Minimize.equals(me.getSource())) {
@@ -138,7 +179,14 @@ public class Controlador implements MouseListener {
 				home.e.setVisible(false);
 				home.d.setVisible(false);
 				home.car.setVisible(false);
-				
+
+				home.hg.medicina.butonDolex.addActionListener(this);
+				home.hg.medicina.buttonDolexNi.addActionListener(this);
+				home.hg.medicina.buttonDolfenox.addActionListener(this);
+				home.hg.medicina.buttonGlic.addActionListener(this);
+				home.hg.medicina.buttonTricovit.addActionListener(this);
+				home.hg.medicina.buttonVoltaren.addActionListener(this);
+
 				home.hg.medicina.setVisible(false);
 				home.hg.bellezas.setVisible(false);
 				home.hg.accesibility.setVisible(false);
@@ -158,7 +206,7 @@ public class Controlador implements MouseListener {
 				home.u.setVisible(false);
 				home.d.setVisible(false);
 				home.car.setVisible(false);
-				
+
 				home.titleHeader.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
 				home.titleHeader.setForeground(new java.awt.Color(204, 204, 204));
 				home.titleHeader.setText("Ayuda/PQR");
@@ -189,7 +237,9 @@ public class Controlador implements MouseListener {
 				home.u.setVisible(false);
 				home.d.setVisible(false);
 				home.car.setVisible(true);
-				
+				con.conectar();
+				cargarCarrito(producto);
+				con.close();
 				home.titleHeader.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
 				home.titleHeader.setForeground(new java.awt.Color(204, 204, 204));
 				home.titleHeader.setText("Compras");
@@ -424,6 +474,23 @@ public class Controlador implements MouseListener {
 			} else if (home.JCarrito.equals(me.getSource())) {
 				home.JCarrito.setBackground(new java.awt.Color(54, 33, 89));
 			}
+		}
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (home.hg.medicina.butonDolex.equals(e.getSource())) {
+			producto.add(2);
+		} else if (home.hg.medicina.buttonDolexNi.equals(e.getSource())) {
+			producto.add(5);
+		} else if (home.hg.medicina.buttonDolfenox.equals(e.getSource())) {
+			producto.add(4);
+		} else if (home.hg.medicina.buttonGlic.equals(e.getSource())) {
+			producto.add(1);
+		} else if (home.hg.medicina.buttonVoltaren.equals(e.getSource())) {
+			producto.add(6);
+		} else if (home.hg.medicina.buttonTricovit.equals(e.getSource())) {
+			producto.add(3);
 		}
 	}
 

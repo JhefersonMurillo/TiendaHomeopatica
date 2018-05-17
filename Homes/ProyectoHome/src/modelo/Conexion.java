@@ -92,7 +92,8 @@ public class Conexion {
 			st.setString(1, pro);
 			rs = st.executeQuery();
 			while (rs.next()) {
-				prod.add(new Producto(0, rs.getString("nombre"), rs.getDouble("precio"), 0));
+				prod.add(new Producto(rs.getLong("id"), rs.getString("nombre"), rs.getDouble("precio"), 0));
+				System.out.println(prod.get(0).getNombre());
 			}
 		} catch (SQLException ex) {
 			System.err.println(ex.getMessage());
